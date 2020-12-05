@@ -1,6 +1,8 @@
 package simplejavacalculator;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
+import static simplejavacalculator.Calculator.MonoOperatorModes.square;
+
 import org.junit.Test;
 
 /**
@@ -13,6 +15,6 @@ public class DoSomeActionTest {
     @Test
     public void testIsThisReallyTrue() {
         Calculator tester = new Calculator();
-        assertEquals(16.0, tester.calculateMono(square, 4.0));
+        assertEquals((Double) 888.0, tester.calculateMono(square, 4.0));
     }
 }
