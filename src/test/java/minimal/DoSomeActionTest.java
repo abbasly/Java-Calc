@@ -1,4 +1,4 @@
-package minimal;
+package simplejavacalculator;
 
 import static org.junit.Assert.assertTrue;
 import org.junit.Test;
@@ -12,6 +12,7 @@ import org.junit.Test;
 public class DoSomeActionTest {
     @Test
     public void testIsThisReallyTrue() {
-        assertTrue(true);
+        Calculator tester = new Calculator();
+        assertEquals(16.0, tester.calculateMono(square, 4.0));
     }
 }
