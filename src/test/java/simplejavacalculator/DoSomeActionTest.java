@@ -66,9 +66,18 @@ public class DoSomeActionTest {
     public void testTan(){
         // squareRoot test
         Calculator tester = new Calculator();
-        Double val = Math.round( tester.calculateMono(tan, 0.0) * 100.0) / 100.0;
-        assertEquals((Double) 0.0, val);
+        Double val = Math.round( tester.calculateMono(tan, Math.toRadians(45)) * 100.0) / 100.0;
+        assertEquals((Double) 1.0, val);
+        assertEquals((Double) 0.0, tester.calculateMono(tan, 0.0));
+        assertEquals((Double) NaN, tester.calculateMono(tan, 90.0));
     }
+    @Test
+    public void testAbs(){
+        // squareRoot test
+        Calculator tester = new Calculator();
+        assertEquals((Double) 5.0, tester.calculateMono(abs, -5.0));
+    }
+
     @Test
     public void testRate(){
         // squareRoot test
@@ -137,5 +146,14 @@ public class DoSomeActionTest {
         assertEquals((Double) 4.0, tester.calculateBi(xpowerofy, 2.0));
         assertEquals((Double) 1.0, tester.calculateBi(xpowerofy, 0.0));
     }
+    @Test
+    public void testEqual(){
+        // squareRoot test
+        Calculator tester = new Calculator();
+        tester.reset();
+        assertEquals((Double) NaN, tester.calculateEqual(2.0));
+    }
+
+
 
 }
