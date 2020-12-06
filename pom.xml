@@ -20,13 +20,12 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>6.9.8</version>
-            <scope>test</scope>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+            <version>0.8.2</version>
         </dependency>
     </dependencies>
-    <reporting>
+    <build>
         <plugins>
             <plugin>
                 <groupId>org.jacoco</groupId>
@@ -47,15 +46,6 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-        </plugins>
-    </reporting>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.2</version>
             </plugin>
         </plugins>
     </build>
