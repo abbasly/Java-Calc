@@ -84,7 +84,7 @@ public class DoSomeActionTest {
         // squareRoot test
         Calculator tester = new Calculator();
         tester.reset();
-        Double temp = tester.calculateBi(normal, 1.0);
+        tester.calculateBi(normal, 1.0);
         assertEquals((Double) NaN, tester.calculateBi(normal, 2.0));
     }
     @Test
@@ -98,7 +98,7 @@ public class DoSomeActionTest {
         // squareRoot test
         Calculator tester = new Calculator();
         tester.reset();
-        Double temp = tester.calculateBi(add, 1.0);
+        tester.calculateBi(add, 1.0);
         assertEquals((Double) 3.0, tester.calculateBi(add, 2.0));
     }
     @Test
@@ -106,7 +106,7 @@ public class DoSomeActionTest {
         // squareRoot test
         Calculator tester = new Calculator();
         tester.reset();
-        Double temp = tester.calculateBi(minus, 10.0);
+        tester.calculateBi(minus, 10.0);
         assertEquals((Double) 8.0, tester.calculateBi(minus, 2.0));
         assertEquals((Double) 10.0, tester.calculateBi(minus, -2.0));
     }
@@ -115,7 +115,7 @@ public class DoSomeActionTest {
         // squareRoot test
         Calculator tester = new Calculator();
         tester.reset();
-        Double temp = tester.calculateBi(multiply, 5.0);
+        tester.calculateBi(multiply, 5.0);
         assertEquals((Double) 10.0, tester.calculateBi(multiply, 2.0));
         assertEquals((Double) (-20.0), tester.calculateBi(multiply, -2.0));
     }
@@ -124,7 +124,7 @@ public class DoSomeActionTest {
         // squareRoot test
         Calculator tester = new Calculator();
         tester.reset();
-        Double temp = tester.calculateBi(divide, 10.0);
+        tester.calculateBi(divide, 10.0);
         assertEquals((Double) 5.0, tester.calculateBi(divide, 2.0));
         assertEquals((Double) Double.POSITIVE_INFINITY, tester.calculateBi(divide, 0.0));
     }
