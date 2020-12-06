@@ -69,13 +69,16 @@ public class DoSomeActionTest {
         Double val = Math.round( tester.calculateMono(tan, Math.toRadians(45)) * 100.0) / 100.0;
         assertEquals((Double) 1.0, val);
         assertEquals((Double) 0.0, tester.calculateMono(tan, 0.0));
+        assertEquals((Double) 0.0, tester.calculateMono(tan, 180.0));
         assertEquals((Double) NaN, tester.calculateMono(tan, 90.0));
+        assertEquals((Double) NaN, tester.calculateMono(tan, 270.0));
     }
     @Test
     public void testAbs(){
         // squareRoot test
         Calculator tester = new Calculator();
         assertEquals((Double) 5.0, tester.calculateMono(abs, -5.0));
+        assertEquals((Double) 5.0, tester.calculateMono(abs, 5.0));
     }
 
     @Test
@@ -109,6 +112,7 @@ public class DoSomeActionTest {
         tester.reset();
         Double temp = tester.calculateBi(add, 1.0);
         assertEquals((Double) 3.0, tester.calculateBi(add, 2.0));
+        assertEquals((Double) 3.0, tester.calculateBi(add, 0.0));
     }
     @Test
     public void testMinus(){
